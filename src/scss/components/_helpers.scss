@@ -1,0 +1,42 @@
+/* Helpers
+  =============== */
+
+.a1-full-height {
+    height: 100%;
+}
+
+.a1-self-center {
+    align-self: center;
+}
+
+.a1-self-stretch {
+    align-self: stretch;
+}
+
+.a1-padding {
+    padding: $padding;
+}
+
+.a1-padding-lr {
+    padding-left: $padding;
+    padding-right: $padding;
+}
+
+.a1-padding-tb {
+    padding-top: $padding;
+    padding-bottom: $padding;
+}
+
+.a1-margin {
+    margin: $margin;
+}
+
+.a1-margin-lr {
+    margin-left: $margin;
+    margin-right: $margin;
+}
+
+.a1-margin-tb {
+    margin-top: $margin;
+    margin-bottom: $margin;
+}

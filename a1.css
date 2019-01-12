@@ -1,0 +1,18 @@
+
+.a1-columns:not(.a1-reverse).a1-divided-items > :not(:first-child):before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -0.5rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.a1-columns.a1-reverse.a1-divided-items > :not(:first-child):after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: -0.5rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}

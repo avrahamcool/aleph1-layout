@@ -1,0 +1,33 @@
+{
+  "name": "aleph1-layout",
+  "author": "Essoudry Avraham",
+  "version": "1.0.0",
+  "description": "A Responsive Layout library.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taniarascia/primitive.git"
+  },
+  "keywords": [
+    "sass",
+    "aleph1",
+    "layout",
+    "framework",
+    "ui",
+    "css framework"
+  ],
+  "dependencies": {
+    "node-sass": "*"
+  },
+  "scripts": {
+    "sass": "node-sass ./src/scss/ -o ./dist/ -w -r --source-map-embed --source-map-contents --output-style expanded | node-sass ./src/scss/main.scss ./dist/main.min.css -w --output-style compressed",
+    "test": "http-server ./dist -p 1111 -a localhost -o"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taniarascia/primitive/issues"
+  },
+  "homepage": "https://taniarascia.github.io/primitive",
+  "private": true,
+  "devDependencies": {}
+}

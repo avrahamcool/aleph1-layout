@@ -1,0 +1,148 @@
+/* Layout
+  =============== */
+
+.a1-row,
+.a1-column {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+
+  &.a1-end {
+    justify-content: flex-end;
+  }
+
+  &.a1-no-scroll,
+  &.a1-magic-scroll {
+    overflow: hidden !important;
+  }
+
+  &.a1-magic-scroll:hover {
+    overflow: auto !important;
+  }
+
+  &.a1-overflow-visible {
+    overflow: visible !important;
+  }
+
+  .a1-justify-items {
+    justify-content: space-between;
+  }
+
+  &.a1-same-size>* {
+    flex: 1 1 0px;
+    overflow: auto;
+  }
+
+  >* {
+    flex: 0 0 auto;
+  }
+
+  >.a1-long {
+    flex: 1 0 auto;
+  }
+
+  >.a1-elastic {
+    flex: 0 1 auto;
+    overflow: auto;
+
+    &.a1-long {
+      flex: 1 1 auto;
+    }
+  }
+
+  &.a1-divided-items> :not(:first-child) {
+    overflow: visible;
+    position: relative;
+  }
+
+}
+
+.a1-row {
+  &:not(.a1-reverse) {
+    flex-direction: row;
+
+    &.a1-spaced-items> :not(:first-child) {
+      margin-left: $margin;
+    }
+  }
+
+  &.a1-reverse {
+    flex-direction: row-reverse;
+
+    &.a1-spaced-items> :not(:first-child) {
+      margin-right: $margin;
+    }
+  }
+
+  &.a1-center-items-h {
+    justify-content: center;
+  }
+
+  &.a1-center-items-v {
+    align-items: center;
+  }
+}
+
+.a1-column {
+  &:not(.a1-reverse) {
+    flex-direction: column;
+
+    &.a1-spaced-items> :not(:first-child) {
+      margin-top: $margin;
+    }
+
+    &.a1-divided-items> :not(:first-child):before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: -0.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &.a1-reverse {
+    flex-direction: column-reverse;
+
+    &.a1-spaced-items> :not(:first-child) {
+      margin-bottom: $margin;
+    }
+
+    &.a1-divided-items> :not(:first-child):after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -0.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &.a1-center-items-h {
+    align-items: center;
+  }
+
+  &.a1-center-items-v {
+    justify-content: center;
+  }
+}
+
+.a1-rtl {
+  direction: rtl;
+
+  .a1-row {
+    &:not(.a1-reverse) {
+      &.a1-spaced-items> :not(:first-child) {
+        margin-left: 0;
+        margin-right: $margin;
+      }
+    }
+
+    &.a1-reverse {
+      &.a1-spaced-items> :not(:first-child) {
+        margin-left: $margin;
+        margin-right: 0;
+      }
+    }
+  }
+}

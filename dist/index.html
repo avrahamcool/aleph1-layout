@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Aleph1-Layout Test Page</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        html {
+            font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            border-bottom: 1px solid black;
+        }
+
+        img {
+            max-height: 50px;
+            width: auto;
+        }
+        main>div:nth-child(odd) {
+            background-color: #adaccd;
+        }
+
+        main>div:nth-child(even) {
+            background-color: #e8e8f3;
+        }
+
+        .demo-boxes {
+            border: 1px solid black;
+            counter-reset: box-number;
+        }
+
+        .a1-column.demo-boxes {
+            height: 250px;
+        }
+
+        .demo-boxes>div {
+            counter-increment: box-number;
+            padding: 10px;
+        }
+
+        .demo-boxes>div:before {
+            content: counter(box-number);
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .demo-boxes>div:nth-child(1) {
+            background-color: #d64d61;
+        }
+
+        .demo-boxes>div:nth-child(2) {
+            background-color: #3e5e04;
+        }
+
+        .demo-boxes>div:nth-child(3) {
+            background-color: #006beb;
+        }
+
+        .demo-boxes>div+div+div+div {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+
+<body class="a1-column">
+    <script src='https://unpkg.com/aurelia-script@1.3.0'></script>
+    </script>
+    <script>
+        const aurelia = new au.Aurelia();
+        aurelia.use
+            .standardConfiguration()
+            .developmentLogging();
+        aurelia
+            .start()
+            .then(() => aurelia.setRoot('app.js', document.body))
+            .catch(ex => {
+                document.body.textContent = `Bootstrap error: ${ex}`;
+            });
+    </script>
+</body>
+
+</html>
