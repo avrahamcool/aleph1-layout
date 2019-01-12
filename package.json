@@ -21,7 +21,7 @@
   },
   "scripts": {
     "sass": "node-sass ./src/scss/ -o ./dist/ -w -r --source-map-embed --source-map-contents --output-style expanded | node-sass ./src/scss/main.scss ./dist/main.min.css -w --output-style compressed",
-    "test": "http-server ./dist -p 1111 -a localhost -o"
+    "test": "http-server ./docs -p 1111 -a localhost -o"
   },
   "license": "MIT",
   "bugs": {
