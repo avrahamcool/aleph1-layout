@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="a1-full-height">
 
 <head>
     <meta charset="utf-8">
@@ -14,12 +14,17 @@
     <script src="docs.js" type="text/javascript"></script>
 </head>
 
-<body class="a1-column">
+<body class="a1-full-height a1-column">
     <header class="a1-row a1-padding a1-spaced-items a1-justify-items a1-center-items-v">
-        <h1 class="a1-row a1-spaced-items a1-center-items-v"><img src="./Aleph1.png" alt="icon" /> Aleph1-Layout Tester</h1>
-        <p>Made to test <a href="https://github.com/avrahamcool/aleph1-layout" target="_blank">Aleph1-Layout</a> by <a
-                href="https://github.com/avrahamcool/">Essoudry
-                Avraham</a>.</p>
+        <h1 class="a1-row a1-spaced-items a1-center-items-v">
+            <img src="./Aleph1.png" alt="icon" />
+            Aleph1-Layout Tester
+        </h1>
+        <p>Made to test
+            <a href="https://github.com/avrahamcool/aleph1-layout">Aleph1-Layout</a>
+            by
+            <a href="https://github.com/avrahamcool/">EssoudryAvraham</a>.
+        </p>
         <div class="a1-row a1-spaced-items">
             <label>a1-ltr <input type="radio" name="direction" value="a1-ltr" onchange="directionChanged()" checked /></label>
             <label>a1-rtl <input type="radio" name="direction" value="a1-rtl" onchange="directionChanged()" /></label>
@@ -64,33 +69,467 @@
         </div>
         <div class="a1-row a1-padding a1-spaced-items a1-same-size">
             <div>
+                <h3>a1-spaced-items + a1-divided-items</h3>
+                <p>you can apply space between the children by using a1-spaced-items</p>
+                <p>you can additionally add the class a1-divided-items to have a visual divider between them.</p>
+                <p>(a1-divided-items uses the :after pseudo classes - use this class carefully if you plan to
+                    use the pseudo class yourself)</p>
+                <ul>
+                    <li>the space between the items is defined by $margin</li>
+                    <li>default margin is 1rem</li>
+                    <li>the divider is always at the middle of the space</li>
+                    <li>the divider is defined by: `border: $divider-width $divider-style $divider-color`</li>
+                    <li>divider default: `border: 1px solid rgba(0, 0, 0, 0.1)`</li>
+                </ul>
+            </div>
+            <div class="a1-row a1-spaced-items a1-same-size">
+                <div>
+                    <h4>a1-spaced-items</h4>
+                    <div class="a1-row a1-spaced-items demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>+ a1-divided-items</h4>
+                    <div class="a1-row a1-spaced-items a1-divided-items demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>a1-spaced-items</h4>
+                    <div class="a1-column a1-spaced-items demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>+ a1-divided-items</h4>
+                    <div class="a1-column a1-spaced-items a1-divided-items demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a1-row a1-padding a1-spaced-items a1-same-size">
+            <div>
+                <h3>a1-justify-items</h3>
+                <p>use this class to equally divide the space between items.</p>
+                <p>for the purpose of this demonstration, the rows width and the columns height are set to a static
+                    size of 250px.</p>
+            </div>
+            <div class="a1-row a1-spaced-items a1-same-size">
+                <div>
+                    <h4>a1-justify-items</h4>
+                    <div class="a1-row fixed-size a1-justify-items demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>a1-justify-items</h4>
+                    <div class="a1-column fixed-size a1-justify-items demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a1-row a1-padding a1-spaced-items a1-same-size">
+            <div>
+                <h3>a1-same-size</h3>
+                <p>use this class to make all items in the same size</p>
+                <p>for the purpose of this demonstration, the columns height is set to a static size of 250px.</p>
+            </div>
+            <div class="a1-row a1-spaced-items a1-same-size">
+                <div>
+                    <h4>a1-same-size</h4>
+                    <div class="a1-row a1-same-size demo-boxes">
+                        <div>1</div>
+                        <div>222222</div>
+                        <div>333</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>a1-same-size</h4>
+                    <div class="a1-column fixed-size a1-same-size demo-boxes">
+                        <div>1</div>
+                        <div>222222</div>
+                        <div>33</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a1-row a1-padding a1-spaced-items a1-same-size">
+            <div>
+                <h3>a1-long</h3>
+                <p>use this class to make an item span the remaining space of the container</p>
+                <p>for the purpose of this demonstration, the columns height is set to a static size of 250px.</p>
+            </div>
+            <div class="a1-row a1-spaced-items a1-same-size">
+                <div>
+                    <h4>a1-long</h4>
+                    <div class="a1-row demo-boxes">
+                        <div class="a1-long">1</div>
+                        <div>222222</div>
+                        <div>333</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>a1-long</h4>
+                    <div class="a1-column fixed-size demo-boxes">
+                        <div class="a1-long">1</div>
+                        <div>222222</div>
+                        <div>33</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a1-row a1-padding a1-spaced-items a1-same-size">
+                <div>
+                    <h3>a1-elastic</h3>
+                    <p>use this class to make an item shrink to reduce overflow of the container</p>
+                    <p>for the purpose of this demonstration, the columns height is set to a static size of 250px.</p>
+                </div>
+                <div class="a1-row a1-spaced-items a1-same-size">
+                    <div>
+                        <h4>a1-elastic</h4>
+                        <div class="a1-row demo-boxes">
+                            <div class="a1-elastic">111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+                            <div>222222</div>
+                            <div>333</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>a1-elastic</h4>
+                        <div class="a1-column fixed-size demo-boxes">
+                            <div class="a1-elastic">1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1</div>
+                            <div>222222</div>
+                            <div>33</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="a1-row a1-padding a1-spaced-items a1-same-size">
+            <div>
+                <h3>a1-end / a1-reverse</h3>
+                <p>you can move all the items to the end of the container by applying a1-end (while preserving the
+                    original order)</p>
+                <p>you can move all the items to the end of the container and reversing their order by applying
+                    a1-reverse</p>
+                <p>for the purpose of this demonstration, the columns height is set to a static size of 250px.</p>
+            </div>
+            <div class="a1-row a1-spaced-items a1-same-size">
+                <div>
+                    <h4>a1-end</h4>
+                    <div class="a1-row a1-end demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>a1-reverse</h4>
+                    <div class="a1-row a1-reverse demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>a1-end</h4>
+                    <div class="a1-column a1-end fixed-size demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>a1-reverse</h4>
+                    <div class="a1-column a1-reverse fixed-size demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a1-row a1-padding a1-spaced-items a1-same-size">
+            <div>
+                <h3>a1-end + a1-reverse</h3>
+                <p>if you apply a1-end and a1-reverse you get the reverse order but at the start of the container</p>
+                <p>for the purpose of this demonstration, the columns height is set to a static size of 250px.</p>
+            </div>
+            <div class="a1-row a1-spaced-items a1-same-size">
+                <div>
+                    <h4>a1-end + a1-reverse</h4>
+                    <div class="a1-row a1-end a1-reverse demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>a1-end + a1-reverse</h4>
+                    <div class="a1-column a1-end a1-reverse fixed-size demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a1-row a1-padding a1-spaced-items a1-same-size">
+            <div>
+                <h3>a1-center-items-h a1-center-items-v</h3>
+                <p>apply those classes to center items vertically or horizontally (regardless of flow direction)</p>
+                <p>individual items can change their own behavior as shown later</p>
+                <p>for the purpose of this demonstration, the columns height is set to a static size of 250px.</p>
+            </div>
+            <div class="a1-row a1-spaced-items a1-same-size">
+                <div>
+                    <h4>a1-center-items-h</h4>
+                    <div class="a1-row a1-center-items-h demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>a1-center-items-v</h4>
+                    <div class="a1-row a1-center-items-v demo-boxes">
+                        <div>1</div>
+                        <div>2<br>2</div>
+                        <div>3<br>3<br>3</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>a1-center-items-h</h4>
+                    <div class="a1-column a1-center-items-h fixed-size demo-boxes">
+                        <div>1</div>
+                        <div>222</div>
+                        <div>33333</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>a1-center-items-v</h4>
+                    <div class="a1-column a1-center-items-v fixed-size demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a1-row a1-padding a1-spaced-items a1-same-size">
+            <div>
+                <h3>a1-self-center a1-self-stretch</h3>
+                <p>individual items can change their own behavior to be centered or stretched</p>
+                <p>for the purpose of this demonstration, the columns height is set to a static size of 250px.</p>
+            </div>
+            <div class="a1-row a1-spaced-items a1-same-size">
+                <div>
+                    <h4>a1-self-center</h4>
+                    <div class="a1-row demo-boxes">
+                        <div class="a1-self-center">1</div>
+                        <div>2<br>2</div>
+                        <div>3<br>3<br>3</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>a1-self-stretch</h4>
+                    <div class="a1-row a1-center-items-v demo-boxes">
+                        <div class="a1-self-stretch">1</div>
+                        <div>2</div>
+                        <div>3<br>3<br>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>a1-self-center</h4>
+                    <div class="a1-column fixed-size demo-boxes">
+                        <div class="a1-self-center">1</div>
+                        <div>222</div>
+                        <div>33333</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>a1-self-stretch</h4>
+                    <div class="a1-column a1-center-items-h fixed-size demo-boxes">
+                        <div class="a1-self-stretch">1</div>
+                        <div>2</div>
+                        <div>333</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a1-row a1-padding a1-spaced-items a1-same-size">
+            <div>
                 <h3>overflow behaviors</h3>
                 <p>you can control the overflow state of a container by applying one of the following classes.</p>
                 <ul>
                     <li>the default behavior is to have a scroll only if needed</li>
                     <li>a1-overflow-visible: the content will be visible outside of the parent boundaries</li>
-                    <li>a1-no-scroll: the content will be hidden outside of the parent boundaries, and no scroll will be provided</li>
+                    <li>a1-no-scroll: the content will be hidden outside of the parent boundaries, and no scroll will
+                        be provided</li>
                     <li>a1-magic-scroll: a scroll will be provided only when the user hovers above the container</li>
                 </ul>
+                <p>for the purpose of this demonstration, the rows width and the columns height are set to a static
+                    size of 250px.</p>
             </div>
             <div class="a1-row a1-spaced-items a1-same-size">
-                <div>
-                    <h4>a1-row</h4>
-                    <div class="a1-row demo-boxes">
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        <div>longer item</div>
+                <div class="a1-column a1-spaced-items">
+                    <div>
+                        <h4>default behavior</h4>
+                        <div class="a1-row fixed-size demo-boxes">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div>6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                            <div>10</div>
+                        </div>
+                        <h4>a1-overflow-visible</h4>
+                        <div class="a1-row fixed-size a1-overflow-visible demo-boxes">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div>6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                            <div>10</div>
+                        </div>
+                        <h4>a1-no-scroll</h4>
+                        <div class="a1-row fixed-size a1-no-scroll demo-boxes">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div>6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                            <div>10</div>
+                        </div>
+                        <h4>a1-magic-scroll</h4>
+                        <div class="a1-row fixed-size a1-magic-scroll demo-boxes">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div>6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                            <div>10</div>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <h4>a1-column</h4>
-                    <div class="a1-column demo-boxes">
+                <div class="a1-row a1-spaced-items">
+                    <h4 class="sideway">default behavior</h4>
+                    <div class="a1-column fixed-size demo-boxes">
                         <div>1</div>
                         <div>2</div>
                         <div>3</div>
-                        <div>longer item</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
                     </div>
+                    <h4 class="sideway">a1-overflow-visible</h4>
+                    <div class="a1-column fixed-size a1-overflow-visible demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                    </div>
+                    <h4 class="sideway">a1-no-scroll</h4>
+                    <div class="a1-column fixed-size a1-no-scroll demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                    </div>
+                    <h4 class="sideway">a1-magic-scroll</h4>
+                    <div class="a1-column fixed-size a1-magic-scroll demo-boxes">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a1-row a1-padding a1-spaced-items a1-same-size">
+            <div>
+                <h3>helper classes</h3>
+                <p>a1-padding a1-padding-lr a1-padding-tb</p>
+                <p>all of the above uses $padding with default: 1rem</p>
+                <p>a1-margin a1-margin-lr a1-margin-tb</p>
+                <p>all of the above uses $margin with default: 1rem</p>
+                <p>a1-full-height: set item height to be 100%</p>
+            </div>
+            <div class="a1-row a1-center-items-v a1-spaced-items">
+                <div class="border">
+                    <div class="a1-padding">a1-padding</div>
+                </div>
+                <div class="border">
+                    <div class="a1-padding-lr">a1-padding-lr</div>
+                </div>
+                <div class="border">
+                    <div class="a1-padding-tb">a1-padding-tb</div>
+                </div>
+                <div class="border">
+                    <div class="a1-margin">a1-margin</div>
+                </div>
+                <div class="border">
+                    <div class="a1-margin-lr">a1-margin-lr</div>
+                </div>
+                <div class="border">
+                    <div class="a1-margin-tb">a1-margin-tb</div>
                 </div>
             </div>
         </div>

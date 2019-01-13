@@ -58,11 +58,23 @@
 }
 
 .a1-row {
+  &.a1-divided-items > :not(:first-child):after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    border-right: $divider;
+  }
+
   &:not(.a1-reverse) {
     flex-direction: row;
 
     &.a1-spaced-items> :not(:first-child) {
       margin-left: $margin;
+    }
+
+    &.a1-divided-items > :not(:first-child):after {
+      left: -0.5 * $margin;
     }
   }
 
@@ -71,6 +83,10 @@
 
     &.a1-spaced-items> :not(:first-child) {
       margin-right: $margin;
+    }
+
+    &.a1-divided-items > :not(:first-child):after {
+      right: -0.5 * $margin;
     }
   }
 
@@ -84,6 +100,14 @@
 }
 
 .a1-column {
+  &.a1-divided-items> :not(:first-child):after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    border-top: $divider;
+  }
+
   &:not(.a1-reverse) {
     flex-direction: column;
 
@@ -91,13 +115,8 @@
       margin-top: $margin;
     }
 
-    &.a1-divided-items> :not(:first-child):before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: -0.5rem;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    &.a1-divided-items> :not(:first-child):after {
+      top: -0.5 * $margin;
     }
   }
 
@@ -109,12 +128,7 @@
     }
 
     &.a1-divided-items> :not(:first-child):after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      left: 0;
-      bottom: -0.5rem;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      bottom: -0.5 * $margin;
     }
   }
 
@@ -136,12 +150,22 @@
         margin-left: 0;
         margin-right: $margin;
       }
+
+      &.a1-divided-items > :not(:first-child):after {
+        left: unset;
+        right: -0.5 * $margin;
+      }
     }
 
     &.a1-reverse {
       &.a1-spaced-items> :not(:first-child) {
         margin-left: $margin;
         margin-right: 0;
+      }
+
+      &.a1-divided-items > :not(:first-child):after {
+        left: -0.5 * $margin;
+        right: unset;
       }
     }
   }

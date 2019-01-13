@@ -22,9 +22,9 @@ $desktop: $medium;
 $padding: 1rem;
 $margin: 1rem;
 
-/* Borders */
+/* Divider */
 
-$border-width: 1px;
-$border-style: solid;
-$border-color: #dedede;
-$borders: $border-width $border-style $border-color;
+$divider-width: 1px;
+$divider-style: solid;
+$divider-color: rgba(0, 0, 0, 0.1);
+$divider: $divider-width $divider-style $divider-color;
