@@ -4,18 +4,17 @@
  * All variables and most of the configuration is defined on this page. */
 
 
-/* Containers */
-
-$x-small: 600px;
-$small: 800px;
-$medium: 1000px;
-$large: 1200px;
 
 /* Breakpoints */
+$small: 768px;
+$medium: 992px;
+$large: 1200px;
 
-$mobile: $x-small;
-$tablet: $small;
-$desktop: $medium;
+$map-breakpoints: ('': 0,
+'-sm': $small,
+'-md': $medium,
+'-lg': $large);
+
 
 /* Padding */
 

@@ -1,42 +1,76 @@
 /* Helpers
   =============== */
+@mixin create-helper-classes($modifier, $breakpoint) {
+    @include create-breakpoint($breakpoint) {
+        .a1-full-height#{$modifier} {
+            height: 100%;
+        }
 
-.a1-full-height {
-    height: 100%;
-}
+        .a1-self-center#{$modifier} {
+            align-self: center;
+        }
 
-.a1-self-center {
-    align-self: center;
-}
+        .a1-self-stretch#{$modifier} {
+            align-self: stretch;
+        }
 
-.a1-self-stretch {
-    align-self: stretch;
-}
+        .a1-padding#{$modifier} {
+            padding: $padding;
+        }
 
-.a1-padding {
-    padding: $padding;
-}
+        .a1-padding-lr#{$modifier} {
+            padding-left: $padding;
+            padding-right: $padding;
+        }
 
-.a1-padding-lr {
-    padding-left: $padding;
-    padding-right: $padding;
-}
+        .a1-padding-tb#{$modifier} {
+            padding-top: $padding;
+            padding-bottom: $padding;
+        }
 
-.a1-padding-tb {
-    padding-top: $padding;
-    padding-bottom: $padding;
-}
+        .a1-margin#{$modifier} {
+            margin: $margin;
+        }
 
-.a1-margin {
-    margin: $margin;
-}
+        .a1-margin-lr#{$modifier} {
+            margin-left: $margin;
+            margin-right: $margin;
+        }
 
-.a1-margin-lr {
-    margin-left: $margin;
-    margin-right: $margin;
-}
+        .a1-margin-tb#{$modifier} {
+            margin-top: $margin;
+            margin-bottom: $margin;
+        }
 
-.a1-margin-tb {
-    margin-top: $margin;
-    margin-bottom: $margin;
+        .a1-end#{$modifier} {
+            justify-content: flex-end;
+        }
+
+        .a1-no-scroll#{$modifier},
+        .a1-magic-scroll#{$modifier} {
+            overflow: hidden !important;
+        }
+
+        .a1-magic-scroll#{$modifier}:hover {
+            overflow: auto !important;
+        }
+
+        .a1-overflow-visible#{$modifier} {
+            overflow: visible !important;
+        }
+
+        .a1-justify-items#{$modifier} {
+            justify-content: space-between;
+        }
+
+        .a1-same-size#{$modifier}>* {
+            flex: 1 1 0px;
+            overflow: auto;
+        }
+
+        .a1-divided-items#{$modifier}> :not(:first-child) {
+            overflow: visible;
+            position: relative;
+        }
+    }
 }

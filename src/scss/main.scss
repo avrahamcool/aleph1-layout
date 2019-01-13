@@ -13,4 +13,9 @@
 
 // Components
 @import "components/helpers";
-@import "components/layout"; 
+@import "components/layout";
+
+@each $modifier, $breakpoint in $map-breakpoints {
+    @include create-layout-classes($modifier, $breakpoint);
+    @include create-helper-classes($modifier, $breakpoint);
+}
