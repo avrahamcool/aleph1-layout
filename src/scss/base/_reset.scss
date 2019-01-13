@@ -1,24 +1,3 @@
 /* Reset
   =============== */
 
-/*
-    1. Reset box sizing to border box
-    2. Reset viewport to full height
-    3. Reset default margin & padding to 0
-*/
-
-html {
-    box-sizing: border-box;
-}
-
-html, body{
-    height: 100%;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}

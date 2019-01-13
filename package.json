@@ -6,7 +6,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taniarascia/primitive.git"
+    "url": "git+https://github.com/avrahamcool/aleph1-layout.git"
   },
   "keywords": [
     "sass",
@@ -20,14 +20,13 @@
     "node-sass": "*"
   },
   "scripts": {
-    "sass": "node-sass ./src/scss/ -o ./dist/ -w -r --source-map-embed --source-map-contents --output-style expanded | node-sass ./src/scss/main.scss ./dist/main.min.css -w --output-style compressed",
-    "test": "http-server ./docs -p 1111 -a localhost -o"
+    "watch": "node-sass ./src/scss/ --output ./dist/ --watch --recursive --source-map-embed --source-map-contents --output-style expanded | node-sass ./src/scss/main.scss ./dist/main.min.css --watch --output-style compressed",
+    "test": "node-sass ./src/scss/main.scss ./docs/main.css --source-map-embed --source-map-contents --output-style expanded | node-sass ./src/scss/main.scss ./docs/main.min.css --output-style compressed | http-server ./docs -p 1111 -a localhost -o"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/taniarascia/primitive/issues"
+    "url": "https://github.com/avrahamcool/aleph1-layout/issues"
   },
-  "homepage": "https://taniarascia.github.io/primitive",
-  "private": true,
+  "homepage": "https://github.com/avrahamcool/aleph1-layout",
   "devDependencies": {}
 }
