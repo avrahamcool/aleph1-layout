@@ -25,9 +25,12 @@
             by
             <a href="https://github.com/avrahamcool/">EssoudryAvraham</a>.
         </p>
-        <div class="a1-row a1-spaced-items">
-            <label>a1-ltr <input type="radio" name="direction" value="a1-ltr" onchange="directionChanged()" checked /></label>
-            <label>a1-rtl <input type="radio" name="direction" value="a1-rtl" onchange="directionChanged()" /></label>
+        <div class="a1-column">
+            <div class="a1-row a1-spaced-items">
+                <label>a1-ltr <input type="radio" name="direction" value="a1-ltr" onchange="directionChanged()" checked /></label>
+                <label>a1-rtl <input type="radio" name="direction" value="a1-rtl" onchange="directionChanged()" /></label>
+            </div>
+            <p>set one class at the root of the document</p>
         </div>
     </header>
     <main class="demo-direction a1-long a1-elastic a1-column a1-spaced-items a1-ltr">
@@ -194,30 +197,30 @@
             </div>
         </div>
         <div class="a1-row a1-padding a1-spaced-items a1-same-size">
+            <div>
+                <h3>a1-elastic</h3>
+                <p>use this class to make an item shrink to reduce overflow of the container</p>
+                <p>for the purpose of this demonstration, the columns height is set to a static size of 250px.</p>
+            </div>
+            <div class="a1-row a1-spaced-items a1-same-size">
                 <div>
-                    <h3>a1-elastic</h3>
-                    <p>use this class to make an item shrink to reduce overflow of the container</p>
-                    <p>for the purpose of this demonstration, the columns height is set to a static size of 250px.</p>
-                </div>
-                <div class="a1-row a1-spaced-items a1-same-size">
-                    <div>
-                        <h4>a1-elastic</h4>
-                        <div class="a1-row demo-boxes">
-                            <div class="a1-elastic">111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
-                            <div>222222</div>
-                            <div>333</div>
-                        </div>
+                    <h4>a1-elastic</h4>
+                    <div class="a1-row demo-boxes">
+                        <div class="a1-elastic">111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+                        <div>222222</div>
+                        <div>333</div>
                     </div>
-                    <div>
-                        <h4>a1-elastic</h4>
-                        <div class="a1-column fixed-size demo-boxes">
-                            <div class="a1-elastic">1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1</div>
-                            <div>222222</div>
-                            <div>33</div>
-                        </div>
+                </div>
+                <div>
+                    <h4>a1-elastic</h4>
+                    <div class="a1-column fixed-size demo-boxes">
+                        <div class="a1-elastic">1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1</div>
+                        <div>222222</div>
+                        <div>33</div>
                     </div>
                 </div>
             </div>
+        </div>
         <div class="a1-row a1-padding a1-spaced-items a1-same-size">
             <div>
                 <h3>a1-end / a1-reverse</h3>
