@@ -21,7 +21,7 @@
   },
   "scripts": {
     "watch": "node-sass ./src/scss/ --output ./dist/ --watch --recursive --source-map-embed --source-map-contents --output-style expanded | node-sass ./src/scss/main.scss ./dist/main.min.css --watch --output-style compressed",
-    "test": "node-sass ./src/scss/main.scss ./docs/main.css --source-map-embed --source-map-contents --output-style expanded | node-sass ./src/scss/main.scss ./docs/main.min.css --output-style compressed | http-server ./docs -p 1111 -a localhost -o -c-1"
+    "test": "node-sass ./src/scss/main.scss ./docs/main.css --source-map-embed --source-map-contents --output-style expanded | http-server ./docs -p 1111 -a localhost -o -c-1"
   },
   "license": "MIT",
   "bugs": {
