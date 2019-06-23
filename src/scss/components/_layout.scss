@@ -24,7 +24,7 @@
     overflow: visible !important;
   }
 
-  .a1-justify-items {
+  &.a1-justify-items {
     justify-content: space-between;
   }
 
@@ -144,7 +144,7 @@
 .a1-rtl {
   direction: rtl;
 
-  .a1-row {
+  .a1-row, &.a1-row {
     &:not(.a1-reverse) {
       &.a1-spaced-items> :not(:first-child) {
         margin-left: 0;
