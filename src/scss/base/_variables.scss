@@ -6,25 +6,25 @@
 
 /* Containers */
 
-$x-small: 600px;
-$small: 800px;
-$medium: 1000px;
-$large: 1200px;
+$x-small: 600px !default;
+$small: 800px !default;
+$medium: 1000px !default;
+$large: 1200px !default;
 
 /* Breakpoints */
 
-$mobile: $x-small;
-$tablet: $small;
-$desktop: $medium;
+$mobile: $x-small !default;
+$tablet: $small !default;
+$desktop: $medium !default;
 
 /* Padding */
 
-$padding: 1rem;
-$margin: 1rem;
+$padding: 1rem !default;
+$margin: 1rem !default;
 
 /* Divider */
 
-$divider-width: 1px;
-$divider-style: solid;
-$divider-color: rgba(0, 0, 0, 0.1);
-$divider: $divider-width $divider-style $divider-color;
+$divider-width: 1px !default;
+$divider-style: solid !default;
+$divider-color: rgba(0, 0, 0, 0.1) !default;
+$divider: $divider-width $divider-style $divider-color !default;
