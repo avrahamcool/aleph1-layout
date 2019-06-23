@@ -9,7 +9,23 @@
 
 Aleph1-Layout is a minimalist responsive layout framework (written in SASS) that provides helpful, browser-consistent helper class for flex layout.
 
-## Developing Prerequisites
+
+## Installing / Getting started
+
+```shell
+yarn add aleph1-layout
+```
+or
+```shell
+npm install aleph1-layout
+```
+now you can use the output from `dist\main.min.css`, or use the `src\scss\main.scss` directly.
+
+in an aurelia app just use `import 'aleph1-layout';` in your `app.ts` file.
+
+every [variable listed here](https://github.com/avrahamcool/aleph1-layout/blob/master/src/scss/base/_variables.scss) can be overridden.
+
+## Developing & Prerequisites
 
 make sure you have `http-server` installed globally.
 ```shell
@@ -26,9 +42,7 @@ cd aleph1-layout/
 yarn
 ```
 
-## Installing / Getting started
-
-simply run `yarn test` or `npm test` to compile the sass and run the demo page.
+then simply run `yarn test` or `npm test` to compile the sass and run the demo page.
 
 run `yarn watch` or `npm watch` to run sass watch on the entire project.
 
