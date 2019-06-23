@@ -1,9 +1,11 @@
 {
   "name": "aleph1-layout",
   "author": "Essoudry Avraham",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A Responsive Layout library.",
-  "main": "index.js",
+  "main": "src/scss/main.scss",
+  "unpkg": "dist/main.min.css",
+  "style": "dist/main.min.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/avrahamcool/aleph1-layout.git"
@@ -16,17 +18,17 @@
     "ui",
     "css framework"
   ],
-  "dependencies": {
-    "node-sass": "*"
-  },
+  "dependencies": {},
   "scripts": {
     "watch": "node-sass ./src/scss/ --output ./dist/ --watch --recursive --source-map-embed --source-map-contents --output-style expanded | node-sass ./src/scss/main.scss ./dist/main.min.css --watch --output-style compressed",
-    "test": "node-sass ./src/scss/main.scss ./docs/main.css --source-map-embed --source-map-contents --output-style expanded | http-server ./docs -p 1111 -a localhost -o -c-1"
+    "test": "node-sass ./src/scss/ --output ./docs/ --watch --recursive --source-map-embed --source-map-contents --output-style expanded | http-server ./docs -p 1111 -a localhost -o -c-1"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/avrahamcool/aleph1-layout/issues"
   },
   "homepage": "https://github.com/avrahamcool/aleph1-layout",
-  "devDependencies": {}
+  "devDependencies": {
+    "node-sass": "*"
+  }
 }
