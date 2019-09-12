@@ -5,7 +5,7 @@
 [![NPMVersion](https://img.shields.io/npm/v/aleph1-layout.svg?style=flat)](https://www.npmjs.com/package/aleph1-layout)
 [![NPMDownloads](https://img.shields.io/npm/dt/aleph1-layout.svg?style=flat)](https://www.npmjs.com/package/aleph1-layout) 
 [![NPMSize](https://img.shields.io/bundlephobia/min/aleph1-layout.svg?style=flat)](https://www.npmjs.com/package/aleph1-layout)
-
+[![DeepScan grade](https://deepscan.io/api/teams/5394/projects/7207/branches/68617/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5394&pid=7207&bid=68617)
 
 Aleph1-Layout is a minimalist responsive layout framework (written in SASS) that provides helpful, browser-consistent helper class for flex layout.
 
