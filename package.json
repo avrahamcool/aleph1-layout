@@ -1,7 +1,7 @@
 {
   "name": "aleph1-layout",
   "author": "Essoudry Avraham",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Responsive Layout library.",
   "main": "src/scss/main.scss",
   "unpkg": "dist/main.min.css",
